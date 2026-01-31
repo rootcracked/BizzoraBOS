@@ -1,0 +1,35 @@
+
+
+FUNCTION REGISTER_USER(REQUEST):
+  // step 1
+  CHECK IF REQUEST[EMAIL] EXISTS IN DB
+  IF EXISTS:
+    BRING ERROR
+  ELSE:
+    //step 2
+    HASH PASSWORD
+    //step 3
+    CREATE USER OBJECT IN DB {
+      USERNAME,
+      BUSINESS_NAME,
+      BUSINESS_ID,
+      EMAIL,
+      PASSWORD,
+      ROLE,
+    }
+
+  //step 4
+  SAVE USER TO DB
+  
+  //step 5 
+  RETURN RESPONSE{
+    USERNAME,
+    BUSINESS_NAME,
+    BUSINESS_ID
+    EMAIL,
+    ROLE,
+}
+
+FUNCTION LOGIN_USER()
+
+

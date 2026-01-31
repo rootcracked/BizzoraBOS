@@ -1,0 +1,29 @@
+function formatNumber(cash):
+
+	step 1. below 1000 -> raw
+	if cash < 1000:
+		return cash as string
+
+	step 2: determine unit + divisor
+	if cash < 1,000,000:
+		unit = "K"
+		divisor = 1000
+
+
+	step 3: compute floating divisor
+	value = cash/divisor
+
+
+	step 4: round to 1 decimal place
+	rounded = round(value to 1 decimal place)
+
+	# Step 5: drop .0 if whole
+	    if rounded has no decimal (.0):
+		    finalValue = integer version of rounded
+		else:
+		 	finalValue = rounded (keep 1 decimal)
+
+
+	# Step 6: append unit
+		return finalValue + unit
+	
